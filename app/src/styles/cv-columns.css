@@ -1,5 +1,5 @@
 .cv-columns {
-    max-width: 540px;
+    max-width: 590px;
     width: 100%;
     padding: 0 20px 0 10px;
 
@@ -12,7 +12,7 @@
 .university-col, .employment-col {
 
     flex: 1;
-    min-width: 240px;
+    min-width: 266px;
 
     display: flex;
     flex-direction: column;
@@ -52,19 +52,14 @@
         color: #61126D;
         display: flex;
         gap: 5px;
-
-        && h3 {
-            font-size: 16px;
-            margin: 0;
-        }
     }
 
     && .subheading {
         padding-left: 24px;
 
         && #date {
-            font-size: 8px;
-            line-height: 14px;
+            font-size: 0.56rem;
+            line-height: 1.25rem;
         }
 
         && #course {
@@ -72,7 +67,6 @@
             font-weight: bold;
         }
 
-        /* Grade */
         && span {
             width: 20.68px;
             height: 13px;
@@ -87,38 +81,28 @@
 
 .employment-col {
 
-    /* Address */
     && .heading {
         display: flex;
         gap: 5px;
 
         && p {
-            font-size: 8px;
-        }
-
-        && h3 {
-            font-size: 16px;
-            margin: 0;
+            font-size: 0.56rem;
         }
     }
 
     && .job {
         padding-left: 25px;
 
-        && h4 {
-            margin: 0;
-            font-size: 11px;
-            line-height: 14px;
-        }
-
         && #date {
-            font-size: 8px;
-            line-height: 14px;
+            font-size: 0.56rem;
+            line-height: 0.95rem;
         }
     }
 
     && #references {
-        padding: 15px 0 0 25px;
+        width: fit-content;
+        height: fit-content;
+        padding: 15px 0 30px 25px;
         font-style: italic;
     }
 }

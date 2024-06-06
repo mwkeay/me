@@ -1,6 +1,5 @@
 .cv {
     width: 100%;
-    padding-bottom: 50px;
 
     background-color: white;
 
@@ -9,17 +8,12 @@
     align-items: center;
     gap: 25px;
 
-    && p {
-        font-size: 11px;
-        line-height: 14px;
-    }
-
     && * {
         box-sizing: border-box;
     }
 }
 
 .cv-introduction {
-    max-width: 500px;
+    max-width: 545px;
     padding: 0 25px 0 25px;
 }

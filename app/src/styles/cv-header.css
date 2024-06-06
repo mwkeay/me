@@ -1,6 +1,5 @@
 .cv-header {
     height: fit-content;
-    min-height: 146px;
     width: 100%;
     box-sizing: border-box;
 
@@ -14,8 +13,8 @@
 
     && > div {
         width: 100%;
-        max-width: 530px;
-        padding: 10px 20px 10px 20px;
+        max-width: 578px;
+        padding: 30px 20px 20px 20px;
         display: flex;
         flex-direction: column;
     }
@@ -25,23 +24,15 @@
     width: fit-content;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 
-    && h1 {
-        font-size: 32px;
-        margin: 0;
-        font-weight: 500; /* medium */
-    }
-
-    && h2 {
-        font-size: 16px;
-        margin: 0;
-        font-weight: normal;
+    && p {
+        font-size: 1.1rem;
     }
 }
 
 .cv-contact {
-    max-width: 400px;
+    max-width: 436px;
     padding-top: 12px;
     display: flex;
     flex-wrap: wrap;
@@ -49,7 +40,7 @@
 }
 
 .cv-contact-item {
-    width: 175px;
+    width: 190px;
     height: fit-content;
 
     display: flex;
@@ -59,16 +50,11 @@
         color: white;
     }
 
-    && > p {
-        font-size: 11px;
-
-        && > .grey {
-            opacity: 50%;
-        }
+    && > p > .grey {
+        opacity: 50%;
     }
 
     && > a {
-        font-size: 11px;
         color: white;
 
         && > .grey {

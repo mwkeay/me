@@ -1,11 +1,13 @@
 html {
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
+
+    font-size: 16px;
 }
 
 body {
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
 
     display: flex;
     justify-content: center;
@@ -15,6 +17,31 @@ body {
     overscroll-behavior: none;
 }
 
-p {
+p, a {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: normal;
+}
+
+h3 {
+    font-size: 1.125rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 0.75rem;
     margin: 0;
 }
