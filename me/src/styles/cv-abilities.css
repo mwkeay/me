@@ -1,0 +1,35 @@
+.cv-abilities {
+    width: 500px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.cv-ability {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    && > .label {
+        font-size: 8px;
+    }
+
+    && > .ability {
+        padding: 2px 6px 2px 6px;
+        border-radius: 9px;
+        
+        &&.language {
+            background-color: black;
+            color: white;
+        }
+        
+        &&.technology {
+            border: 1px solid black;
+        }
+
+        &&.skill {
+            border: 1px dashed black;
+        }
+    }
+}
