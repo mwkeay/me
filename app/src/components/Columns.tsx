@@ -6,7 +6,7 @@ import "@/styles/cv-columns.css";
 const inter = Inter({ subsets: ["latin"] });
 
 const DEFAULT_UNI_POINTS: (string | ReactNode)[] = [
-    "Modules including: Advanced Database Concepts, Usability Testing, Software Engineering Culture and Data Analytics and Visualisation.",
+    "Modules including: Advanced Database Concepts, Usability Testing, Software Engineering Culture, and Data Analytics and Visualisation.",
     <>Presented on React frameworks and build tools at the Student Software Engineering and Culture Mock Conference. Slides, handouts and source code available at: <a href="https://github.com/mwkeay/the-cra-curse">github.com/mwkeay/the-cra-curse</a></>,
     "Lead a MoD student project working with the Royal Navy Head of Climate Change and Sustainability to research behaviours around digital education and design alternative programs.",
     "Engineering dissertation follows the development of a web app integrated into Spotify to recommend music based on a crowd-sourced sampling database.",

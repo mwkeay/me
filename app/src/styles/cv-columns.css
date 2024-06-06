@@ -1,15 +1,18 @@
 .cv-columns {
-    width: 512px;
-    height: 441px;
-    margin-right: 12px;
+    max-width: 540px;
+    width: 100%;
+    padding: 0 20px 0 10px;
 
     display: flex;
-    gap: 20px;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    row-gap: 30px;
 }
 
 .university-col, .employment-col {
 
-    width: 100%;
+    flex: 1;
+    min-width: 240px;
 
     display: flex;
     flex-direction: column;
@@ -57,7 +60,7 @@
     }
 
     && .subheading {
-        margin-left: 24px;
+        padding-left: 24px;
 
         && #date {
             font-size: 8px;
@@ -115,7 +118,7 @@
     }
 
     && #references {
-        padding-left: 25px;
+        padding: 15px 0 0 25px;
         font-style: italic;
     }
 }

@@ -1,5 +1,7 @@
 .cv-abilities {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
+    padding: 0 10px 0 10px;
 
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +9,7 @@
 }
 
 .cv-ability {
+    min-height: 24px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

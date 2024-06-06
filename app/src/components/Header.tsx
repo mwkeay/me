@@ -25,18 +25,16 @@ const ContactItem: FC<{ src: string, text: string | ReactNode, href?: string }> 
 const Header: FC = () => {
     return (
         <div className="cv-header">
+            <div>
 
-            <div className="cv-title">
-                <h1 className={ inter.className }>Michael Keay</h1>
-                <h2 className={ inter.className }>Junior Full Stack Developer</h2>
-            </div>
+                <div className="cv-title">
+                    <h1 className={ inter.className }>Michael Keay</h1>
+                    <h2 className={ inter.className }>Junior Full Stack Developer</h2>
+                </div>
 
-            <div className="cv-contact">
-                <div>
+                <div className="cv-contact">
                     <ContactItem src="/email.svg" text="mwkeay@gmail.com" />
                     <ContactItem src="/phone.svg" text="+447411 515631" />
-                </div>
-                <div>
                     <ContactItem
                         src="/github.svg"
                         text={ <> <span className="grey">github.com/</span>mwkeay </> }
@@ -48,8 +46,8 @@ const Header: FC = () => {
                         href="https://www.linkedin.com/in/mwkeay/"
                     />
                 </div>
-            </div>
 
+            </div>
         </div>
     );
 };
