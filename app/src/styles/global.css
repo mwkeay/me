@@ -11,7 +11,6 @@ body {
     justify-content: center;
     margin: 0;
 
-    background-color: pink; /* <- REMOVE WHEN DONE TESTING */
     font-family: Arial, Helvetica, sans-serif;
     overscroll-behavior: none;
 }
