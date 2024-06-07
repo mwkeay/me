@@ -1,8 +1,14 @@
 import { FC } from "react";
-import "@/styles/cv.css";
+import type { Metadata } from "next";
 import Abilities from "@/components/AbilitiesList";
 import Header from "@/components/Header";
 import Columns from "@/components/Columns";
+import "@/styles/cv.css";
+
+export const metadata: Metadata = {
+    title: "Michael Keay - Full Stack Developer",
+    icons: "/favicon.ico"
+};
 
 const Page: FC = () => {
     return (
