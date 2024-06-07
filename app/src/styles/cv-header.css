@@ -63,7 +63,7 @@
         
         &&:hover {
             opacity: 100%;
-            color: blue;
+            color: #61126D;
 
             && > .grey {
                 opacity: 100%;
