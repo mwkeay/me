@@ -29,7 +29,7 @@ const Header: FC = () => {
 
                 <div className="cv-title">
                     <h1 className={ inter.className }>Michael Keay</h1>
-                    <p className={ inter.className }>Junior Full Stack Developer</p>
+                    <p className={ inter.className }>Full Stack Developer</p>
                 </div>
 
                 <div className="cv-contact">
