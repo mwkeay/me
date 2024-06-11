@@ -33,13 +33,14 @@ const UniversityColumn: FC = () => {
         <div className="university-col">
             
             <div className="heading">
-                <Image 
-                    src="/university.svg"
-                    width={ 19 }
-                    height={ 21 }
-                    alt="university.svg"
-                />
-                <h3>University of Portsmouth</h3>
+                <div className="icon-container">
+                    <Image
+                        src="/university.svg"
+                        layout="fill"
+                        alt="university.svg"
+                    />
+                </div>
+                <h3 className={ inter.className }>University of Portsmouth</h3>
             </div>
 
             <div className="subheading">
@@ -66,14 +67,15 @@ const EmploymentColumn: FC = () => {
         <div className="employment-col">
 
             <div className="heading">
-                <Image 
-                    src="/employment.svg"
-                    width={ 19 }
-                    height={ 19 }
-                    alt="employment.svg"
-                />
+                <div className="icon-container">
+                    <Image
+                        src="/employment.svg"
+                        layout="fill"
+                        alt="employment.svg"
+                    />
+                </div>
                 <div>
-                    <h3>Signet Jewelers</h3>
+                    <h3 className={ inter.className }>Signet Jewelers</h3>
                     <p>H. Samuel, 145-147 Commercial Rd, Portsmouth, PO1 1EX</p>
                 </div>
             </div>

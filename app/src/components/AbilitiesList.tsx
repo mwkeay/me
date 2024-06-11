@@ -1,5 +1,8 @@
+"use client"
+
 import { FC } from "react";
 import "@/styles/cv-abilities.css";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface Abilities {
     languages: string[]
@@ -14,59 +17,75 @@ const DEFAULT_ABILITIES: Abilities = {
 };
 
 const AbilityView: FC<{ type: "language" | "technology" | "skill", ability: string, first?: boolean }> = ({ type, ability, first = false }) => {
+    
     return (
-        <div className="cv-ability">
+        <>
+            <div className="cv-ability">
 
-            { first
-                ? <p className="label">{
-                    type == "language"
-                    ? "Languages"
-                    : type == "technology"
-                    ? "Technologies"
-                    : "Skills"
-                }</p>
-                : null
-            }
+                { first
+                    ? <p className="label">{
+                        type == "language"
+                        ? "Languages"
+                        : type == "technology"
+                        ? "Technologies"
+                        : "Skills"
+                    }</p>
+                    : null
+                }
 
-            <p className={ "ability " + type }>{ ability }</p>
-        </div>
+                <p className={ "ability " + type }>{ ability }</p>
+            </div>
+        </>
     )
 };
 
 const AbilitiesList: FC = () => {
 
+    // Max width (in rem) before adding breaks to abilities list
+    const NARROW_LIMIT = 34
+    // Only retrieve rem value if running in client, otherwise set to default for server rendering
+    const remSize = typeof window !== "undefined" ? parseFloat(getComputedStyle(document.documentElement).fontSize) : 16;
+
+    const { width } = useWindowSize();
+
+    const narrow = width !== undefined && width < remSize * NARROW_LIMIT;
+
     const abilities: Abilities = DEFAULT_ABILITIES;
+
+    const languageViews = abilities.languages.map((ability, index) =>
+        <AbilityView
+            type="language"
+            ability={ ability }
+            first={ index == 0 }
+            key={ index + 1 }
+        />
+    )
+
+    const technologyViews = abilities.technologies.map((ability, index) =>
+        <AbilityView
+            type="technology"
+            ability={ ability }
+            first={ index == 0 }
+            key={ index + abilities.languages.length + 1 }
+        />
+    )
+
+    const skillViews = abilities.skills.map((ability, index) =>
+        <AbilityView
+            type="skill"
+            ability={ ability }
+            first={ index == 0 }
+            key={ index + abilities.languages.length + abilities.technologies.length + 1 }
+        />
+    )
 
     return (
         <div className="cv-abilities">
-
-            { abilities.languages.map((ability, index) =>
-                <AbilityView
-                    type="language"
-                    ability={ ability }
-                    first={ index == 0 }
-                    key={ index + 1 }
-                />
-            )}
-
-            { abilities.technologies.map((ability, index) =>
-                <AbilityView
-                    type="technology"
-                    ability={ ability }
-                    first={ index == 0 }
-                    key={ index + abilities.languages.length + 1 }
-                />
-            )}
-
-            { abilities.skills.map((ability, index) =>
-                <AbilityView
-                    type="skill"
-                    ability={ ability }
-                    first={ index == 0 }
-                    key={ index + abilities.languages.length + abilities.technologies.length + 1 }
-                />
-            )}
-
+            { languageViews }
+            { narrow ? <div className="break" /> : null }
+            { technologyViews }
+            { narrow ? <div className="break" /> : null }
+            { skillViews }
         </div>
     );
 };
